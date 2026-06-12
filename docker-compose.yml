@@ -1,3 +1,7 @@
+ðŸ”¥ Pterodactyl Command Docker By Ryuuzyy ðŸ˜ˆ
+
+âŸ© - - - Isi File docker-compose.yml : - - - âŸ¨
+
 version: '3.8'
 x-common:
   database:
@@ -26,7 +30,7 @@ x-common:
     MAIL_USERNAME: ""
     MAIL_PASSWORD: ""
     MAIL_ENCRYPTION: "true"
-
+ 
 #
 # ------------------------------------------------------------------------------------------
 # DANGER ZONE BELOW
@@ -78,3 +82,13 @@ networks:
     ipam:
       config:
         - subnet: 172.20.0.0/16
+
+âŸ© - - - First Command Root APT :  - - - âŸ¨
+- sudo apt update
+- sudo apt upgrade -y
+
+âŸ© - - - Run File Docker :  - - - âŸ¨
+- docker-compose up -d
+
+âŸ© - - - Create User Panel : - - - âŸ¨
+- docker-compose run --rm panel php artisan p:user:make
